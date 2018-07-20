@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Whatsplaying2</title>
+    <title>WhatsPlaying</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <p>Made with ☕️ and 🎵 by <a href="https://twitter.com/philnash">phil nash</a></p>
+    </footer>
   </body>
 </html>

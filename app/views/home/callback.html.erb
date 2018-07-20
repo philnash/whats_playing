@@ -1,2 +1,8 @@
-<h1>Home#callback</h1>
-<p>Find me in app/views/home/callback.html.erb</p>
+<div class="content">
+  <h1>Your Spotify credentials</h1>
+
+  <textarea>SPOTIFY_USER_ID: "<%= @spotify_user.id %>"
+SPOTIFY_TOKEN: "<%= @spotify_user.credentials["token"] %>"
+SPOTIFY_REFRESH_TOKEN: "<%= @spotify_user.credentials["refresh_token"] %>"
+SPOTIFY_PLAYLIST_ID: "<%= @new_playlist.id %>"</textarea>
+</div>

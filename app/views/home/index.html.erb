@@ -1,2 +1,23 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="content">
+  <% if @playlist_id %>
+    <h1>Add songs to this playlist from WhatsApp</h1>
+    <p>Just send a message to <a href="whatsapp://send?text=I'm%20so%20excited&amp;phone=<%= ENV['WHATSAPP_NUMBER'] %>&amp;abid=<%= ENV['WHATSAPP_NUMBER'] %>"><%= ENV['WHATSAPP_NUMBER'] %></a></p>
+
+    <iframe src="https://open.spotify.com/embed/user/philnash/playlist/<%= @playlist_id %>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <% else %>
+    <h1>First, connect your Spotify account</h1>
+
+    <p><%= link_to 'Sign in with Spotify', '/auth/spotify' %></p>
+  <% end %>
+</div>
+
+<script>
+window.addEventListener('load', function() {
+  var iframe = document.querySelector('iframe');
+  if (iframe) {
+    setInterval(function() {
+      iframe.src = iframe.src;
+    }, 60000);
+  }
+})
+</script>
