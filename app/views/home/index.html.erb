@@ -1,7 +1,6 @@
 <div class="content">
   <% if @playlist_id %>
     <h1>Add songs to this playlist from WhatsApp</h1>
-    <p>Just send a message to <a href="whatsapp://send?text=I'm%20so%20excited&amp;phone=<%= ENV['WHATSAPP_NUMBER'] %>&amp;abid=<%= ENV['WHATSAPP_NUMBER'] %>"><%= ENV['WHATSAPP_NUMBER'] %></a></p>
 
     <iframe src="https://open.spotify.com/embed/user/philnash/playlist/<%= @playlist_id %>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   <% else %>
