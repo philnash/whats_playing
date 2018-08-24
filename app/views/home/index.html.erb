@@ -2,7 +2,7 @@
   <% if @playlist_id %>
     <h1>Add songs to this playlist from WhatsApp</h1>
 
-    <iframe src="https://open.spotify.com/embed/user/philnash/playlist/<%= @playlist_id %>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/user/<%= @user_id %>/playlist/<%= @playlist_id %>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   <% else %>
     <h1>First, connect your Spotify account</h1>
 
