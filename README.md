@@ -68,3 +68,11 @@ bundle exec rails server
 ```
 
 Then send the WhatsApp sandbox number the name of a song. And enjoy!
+
+## Contributing
+
+Found something broken or want to improve the code, please get in touch by opening an issue or submitting a pull request!
+
+## License
+
+This repo is covered by the MIT license.
