@@ -2,6 +2,10 @@
 
 This is an application that uses the [Twilio API for WhatsApp](https://www.twilio.com/whatsapp) and the [Spotify API](https://developer.spotify.com/documentation/web-api/) to build a collaborative playlist.
 
+## See the app in action
+
+You can see the application and play with it at https://twilio-whatsapp-spotify.herokuapp.com/.
+
 ## To run the application
 
 You will need a few things to run this application.
