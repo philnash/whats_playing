@@ -1,6 +1,9 @@
 <div class="content">
   <% if @playlist_id %>
     <h1>Add songs to this playlist from WhatsApp</h1>
+    <p>Join the sandbox by sending a WhatsApp message saying "join <%= ENV['WHATSAPP_SANDBOX_PHRASE'] %>" to <a href="https://wa.me/<%= ENV['WHATSAPP_NUMBER'] %>?text=<%= URI.encode("join #{ENV['WHATSAPP_SANDBOX_PHRASE']}") %>">+<%= ENV['WHATSAPP_NUMBER'] %></a>
+
+    <p>Once connected, send your favourite song to add it to the playlist!</p>
 
     <iframe src="https://open.spotify.com/embed/user/<%= @user_id %>/playlist/<%= @playlist_id %>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   <% else %>
