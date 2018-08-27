@@ -27,6 +27,8 @@ There's one more thing we need to do here. Click on "edit settings", enter the r
 
 ### Prepare this application
 
+#### Authenticating with Spotify
+
 Clone the application, change into the directory and install the dependencies with bundler.
 
 ```bash
@@ -45,4 +47,24 @@ Open [localhost:3000](http://localhost:3000/) and sign in with Spotify. When you
 
 Restart the application and load the home page again. You will see an empty embedded playlist (which you will also find in your Spotify account now).
 
-You're now ready to build the rest of the application.
+#### TWILIO_AUTH_TOKEN
+
+To protect the Twilio endpoint from other access, this project uses the [Twilio Rack middleware](https://www.twilio.com/blog/2014/09/securing-your-ruby-webhooks-with-rack-middleware.html) protection. To enable this, add your Twilio Auth Token to `config/env.yml`.
+
+#### WhatsApp Sandbox
+
+To use this with the Twilio API's WhatsApp Sandbox you will need to [enable the sandbox in your Twilio console](https://www.twilio.com/console/sms/whatsapp/sandbox). Once you've done that you need to connect the WhatsApp to your application.
+
+If you are running the app locally, I recommend using [ngrok](https://ngrok.com) to give you a public URL that tunnels through to your development machine.
+
+Connect the WhatsApp sandbox number to your application by filling in the webhook URL with `https://YOUR_APP_URL/twilio/messages`.
+
+### Run the application
+
+Start the application with
+
+```bash
+bundle exec rails server
+```
+
+Then send the WhatsApp sandbox number the name of a song. And enjoy!
