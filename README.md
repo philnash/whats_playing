@@ -2,6 +2,8 @@
 
 This is an application that uses the [Twilio API for WhatsApp](https://www.twilio.com/whatsapp) and the [Spotify API](https://developer.spotify.com/documentation/web-api/) to build a collaborative playlist.
 
+Read how to [build a collaborative playlist over WhatsApp with Rails, Twilio and Spotify](https://www.twilio.com/blog/collaborative-playlist-whatsapp-rails-twilio-spotify) on the Twilio blog.
+
 ## To run the application
 
 You will need a few things to run this application.
@@ -45,4 +47,4 @@ Open [localhost:3000](http://localhost:3000/) and sign in with Spotify. When you
 
 Restart the application and load the home page again. You will see an empty embedded playlist (which you will also find in your Spotify account now).
 
-You're now ready to build the rest of the application.
+You're now ready to build the rest of the application. Read the blog post on how to [build a collaborative playlist over WhatsApp with Rails, Twilio and Spotify](https://www.twilio.com/blog/collaborative-playlist-whatsapp-rails-twilio-spotify).
