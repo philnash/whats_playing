@@ -20,6 +20,8 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'lograge', '~> 0.10.0'
+
 gem 'rspotify', '~> 2.2.1'
 gem 'twilio-ruby', '~> 5.12.3'
 
